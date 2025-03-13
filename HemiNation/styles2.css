@@ -1,0 +1,167 @@
+
+/* pic of hennessey */
+img {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 1000px;
+  max-height: 691px;
+  
+}
+
+/* SLide in picture of henny on main pages */
+.slide-in {
+  width: 540px; 
+  opacity: 0;
+  transform: translateX(-100%); /* Start off-screen to the left */
+  animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Style the links inside the navigation bar */
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  width:1600px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 160px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: gray;
+  color: white;
+}
+
+/* Add a color NEON WORDS */
+.neon-text {
+  position: fixed;
+  top:18%;
+  left: 48%;
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 20px orange, 0 0 40px orange, 0 0 80px orange;
+  }
+  100% {
+      text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+  }
+}
+
+
+
+/* mainpage background color */
+     #gradient
+     {
+         height:800px;
+         width:1600px;
+         border:1px solid black;
+         font-size:30px;
+         background: linear-gradient(130deg, orange , brown, gold);
+         background-size: 400% 400%;
+     
+         -webkit-animation: Animation 7s ease infinite;
+         -moz-animation: Animation 7s ease infinite;
+         animation: Animation 7s ease infinite;
+     }
+     
+     @-webkit-keyframes Animation {
+         0%{background-position:10% 0%}
+         50%{background-position:91% 100%}
+         100%{background-position:10% 0%}
+     }
+     @-moz-keyframes Animation {
+         0%{background-position:10% 0%}
+         50%{background-position:91% 100%}
+         100%{background-position:10% 0%}
+     }
+     @keyframes Animation { 
+         0%{background-position:10% 0%}
+         50%{background-position:91% 100%}
+         100%{background-position:10% 0%}
+     }
+      
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      position: absolute;
+      top: 15%;
+      right:35%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      position: absolute;
+      background: transparent;
+      width: calc(var(--i) * 2.5vmin);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 3px solid rgb(255, 160, 16);
+      transform-style: preserve-3d;
+      transform: rotateX(70deg) translateZ(50px);
+      animation: animate 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+      box-shadow: 0 0 15px rgb(124, 124, 124),
+                  inset 0 0 15px rgb(124, 124, 124);
+    }
+
+    @keyframes animate {
+      0%, 100% {
+        transform: rotateX(70deg) translateZ(50px) translateY(0);
+        filter: hue-rotate(0);
+      }
+
+      50% {
+        transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+        filter: hue-rotate(360deg);
+      }
+    }
+  
